@@ -1,0 +1,10 @@
+extends layout
+block content
+  include header.jade
+  div.container(ng-view)
+  include footer.jade
+  script(src='//cdn.bootcss.com/require.js/2.2.0/require.min.js')
+  script(src='//echarts.baidu.com/build/dist/echarts.js')
+  script(src='//cdn.bootcss.com/jquery/2.2.4/jquery.min.js')
+  script(src='//cdn.bootcss.com/jcarousel/0.3.4/jquery.jcarousel.min.js')
+  script(src='/javascripts/index.js')

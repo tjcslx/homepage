@@ -1,0 +1,11 @@
+<h1>删除新闻</h1>
+<p>
+    是否删除这条新闻？
+</p>
+<ul ng-repeat="n in news">
+    <li>新闻标题：{{n.nm_title}}</li>
+    <li>新闻内容：{{n.nm_content}}</li>
+    <li>新闻版块：{{n.dnc_name}}</li>
+</ul>
+<input type="button" value="删除" class="btn btn-danger" ng-click="delete()" />
+<a class="btn btn-default" href="/backend/#/">取消</a>

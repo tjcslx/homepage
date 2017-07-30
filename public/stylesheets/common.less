@@ -1,0 +1,97 @@
+@charset "utf-8";
+body,
+h3 {
+    margin: 0;
+    padding: 0;
+    font: 14px Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, "\5b8b\4f53", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    &.more {
+        height: 40px;
+        line-height: 40px;
+        display: inline-block;
+        float: right;
+        padding: 0 35px 0 0;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+}
+
+//文字超过宽度部分自动隐藏，并追加省略号
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lists(@margin-left: 0px, @margin-right: 0px, @title--width) when (ispixel(@margin-right)) and (ispixel(@margin-left)) and (ispixel(@title--width)) {
+    ul {
+        margin-left: @margin-left;
+        li {
+            list-style-type: disc;
+            a {
+                span {
+                    height: 24px;
+                    line-height: 24px;
+                    display: inline-block;
+                    &.title {
+                        font-size: 14px;
+                        color: @txtColor;
+                        width: @title--width;
+                        .text-ellipsis;
+                    }
+                    &.date {
+                        font-size: 12px;
+                        color: #999;
+                        float: right;
+                        margin-right: @margin-right;
+                        &:before {
+                            content: "[";
+                        }
+                        &:after {
+                            content: "]";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lists_in_section {
+    li {
+        min-width: 70px;
+        display: inline-block;
+        text-align: center;
+        padding: 0 5px;
+        border-right: 1px solid #000;
+        &:last-child {
+            border: 0;
+        }
+        &.active {
+            a {
+                color: #f00;
+            }
+        }
+        a {
+            color: #3b7dd4;
+            font-weight: bold;
+            &:hover {
+                color: #f00;
+            }
+            transition: color 0.2s ease-in;
+        }
+    }
+}

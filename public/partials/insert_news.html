@@ -1,0 +1,18 @@
+<form action="">
+    <div class="form-group">
+        <label for="newsheading">新闻标题</label>&nbsp;
+        <input type="text" class="form-control" id="newsheading" ng-model="news.nm_title">{{news_nm_title}}
+    </div>
+    <div class="form-group">
+        <label for="newscontent">新闻内容</label>&nbsp;
+        <textarea class="form-control" id="newscontent" rows="5" wrap="physical" ng-model="news.nm_content">{{news.nm_content}}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="newscategory">新闻版块</label>&nbsp;
+        <select class="form-control" id="newscategory" ng-controller="NewsCategoryPC" ng-model="news.nm_category">{{news.nm_category}}
+            <option value="0" selected="selected">请选择</option>
+            <option ng-repeat="n in nc" value={{n.dnc_id}}>{{n.dnc_name}}</option>
+        </select>
+    </div>
+    <input type="button" class="btn btn-primary" value="保存" ng-click="insert()"></input>
+</form>

@@ -1,0 +1,53 @@
+@media all and (min-width: 415px) {
+    footer {
+        height: 140px;
+        width: 100%;
+        background-color: @navColor;
+        text-align: center;
+        ul {
+            height: 24px;
+            width: 414px;
+            display: block;
+            margin: 0 auto;
+            padding: 10px 0;
+            li {
+                height: 24px;
+                width: 82px;
+                float: left;
+                text-align: center;
+                border-right: 1px solid #fff;
+                &:last-child {
+                    border-right-width: 0;
+                }
+                a {
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: #fff;
+                }
+            }
+        }
+        div {
+            height: 87px;
+            width: 354px;
+            margin: 0 auto;
+            a {
+                img {
+                    float: left;
+                    height: 87px;
+                    width: 87px;
+                }
+            }
+            span {
+                font-size: 12px;
+                color: #fff;
+                line-height: 29px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 414px) {
+    footer {
+        display: none;
+    }
+}

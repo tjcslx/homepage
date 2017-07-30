@@ -1,0 +1,22 @@
+extends layout
+block content
+  include header.jade
+  article
+    h1
+    span 发布时间：
+    span
+    span 字体：
+    span#big 大
+    span#medium 中
+    span#small 小
+    span 视力保护色：
+    ul
+      li
+      li
+      li
+      li
+      li
+      li
+    p= title
+  include footer.jade
+  script(src='/javascripts/news.js')

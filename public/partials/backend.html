@@ -1,0 +1,38 @@
+<form action="" method="POST" role="form" class="form-inline">
+    <legend>新闻查询</legend>
+    <div class="form-group">
+        <label for="heading">新闻标题</label>
+        <input type="text" class="form-control" id="heading" placeholder="新闻标题关键字">
+    </div>
+    <div class="form-group">
+        <label for="category">新闻版块</label>
+        <select name="新闻版块" id="category" class="form-control" ng-controller="NewsCategoryPC">
+            <option value="0" selected="selected">请选择</option>
+            <option ng-repeat="n in nc" value={{n.dnc_id}}>{{n.dnc_name}}</option>
+        </select>
+    </div>
+</form>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>序号</th>
+            <th>标题</th>
+            <th>来源</th>
+            <th>发布时间</th>
+            <th>删除</th>
+        </tr>
+    </thead>
+    <tbody ng-controller="NewsListPC">
+        <tr ng-repeat="n in nl">
+            <td><a href="/backend/#/show-news/{{n.nm_id}}">{{n.nm_id}}</a></td>
+            <td><a href="/backend/#/show-news/{{n.nm_id}}">{{n.nm_title}}</a></td>
+            <td><a href="/backend/#/show-news/{{n.nm_id}}">{{n.dnc_name}}</a></td>
+            <td><a href="/backend/#/show-news/{{n.nm_id}}">{{n.insert_date}}</a></td>
+            <td><a href="/backend/#/delete-news/{{n.nm_id}}"><i class="glyphicon glyphicon-remove"></i></a></td>
+        </tr>
+    </tbody>
+</table>
+<!--下方为添加按钮，点击该按钮弹出模态窗口进行新闻的添加操作-->
+<a href="/backend/#/insert-news">
+    <button type="button" class="btn btn-primary">添加</button>
+</a>

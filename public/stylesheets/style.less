@@ -1,0 +1,1395 @@
+@import 'header';
+@import 'footer';
+@import 'common';
+@navColor: #1769c4;
+@topColor: #3670eb;
+@borderColor: #5a8dce;
+@txtColor: #3d3d3d;
+div.container {
+    @media all and (min-width: 415px) {
+        div.container--pc {
+            background-color: #EFEFEF;
+            height: 900px;
+            div.fixed {
+                position: fixed;
+                left: 73px;
+                height: 438px;
+                width: 73px;
+                z-index: 10;
+                a {
+                    span {
+                        position: absolute;
+                        top: 1px;
+                        height: 73px;
+                        width: 73px;
+                        display: block;
+                        cursor: pointer;
+                        transition: background-image 0.2s ease-in;
+                        &.query {
+                            background: url('../images/1502071806421371844.jpg') 0 0 no-repeat;
+                            &:hover {
+                                background: url('../images/1502071800138842130.jpg') 0 0 no-repeat;
+                            }
+                        }
+                        &.wechat {
+                            top: 75px;
+                            background: url('../images/1502071806428519478.jpg') 0 0 no-repeat;
+                            &:hover {
+                                background: url('../images/1502071800146915296.jpg') 0 0 no-repeat;
+                            }
+                        }
+                        &.weibo {
+                            top: 149px;
+                            background: url('../images/1502071806426648612.jpg') 0 0 no-repeat;
+                            &:hover {
+                                background: url('../images/1502071800145339116.jpg') 0 0 no-repeat;
+                            }
+                        }
+                        &.mobile {
+                            top: 223px;
+                            background: url('../images/1502071806423084500.jpg') 0 0 no-repeat;
+                            &:hover {
+                                background: url('../images/1502071800141625811.jpg') 0 0 no-repeat;
+                            }
+                        }
+                        &.nettax {
+                            top: 297px;
+                            background: url('../images/1602011436203109515.png') 0 0 no-repeat;
+                        }
+                        &.gwy {
+                            top: 371px;
+                            background: url('../images/1603041630199175329.png') 0 0 no-repeat;
+                        }
+                    }
+                }
+            }
+            div.container--hover {
+                position: relative;
+                height: 0;
+                width: 1000px;
+                margin: 0 auto;
+                z-index: 3;
+                section {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: none;
+                    transition: height 0.2s ease-in, width 0.2s ease-in;
+                    &.bureau {
+                        background-color: #fff;
+                        div {
+                            &.left,
+                            &.mid,
+                            &.right {
+                                height: 340px;
+                                width: 320px;
+                                margin: 10px 0 0 10px;
+                                float: left;
+                            }
+                            &.left {
+                                ul {
+                                    li {
+                                        height: 30px;
+                                        width: 140px;
+                                        float: left;
+                                        margin: 10px;
+                                        text-align: center;
+                                        background-color: #f0f0f0;
+                                        font-size: 14px;
+                                        line-height: 30px;
+                                        a {
+                                            color: #000;
+                                        }
+                                    }
+                                }
+                            }
+                            &.mid {
+                                ul.mid--title {
+                                    .lists_in_section;
+                                }
+                                div {
+                                    display: none;
+                                    &.brief {
+                                        a.brief--top {
+                                            display: block;
+                                            height: 100px;
+                                            width: 280px;
+                                            margin: 20px auto;
+                                            background-color: #f5f5f5;
+                                            img {
+                                                float: left;
+                                                margin: 13px 5px 0 13px;
+                                            }
+                                        }
+                                        div.brief--content {
+                                            width: 280px;
+                                            margin: 0 auto;
+                                        }
+                                    }
+                                    &.deps {
+                                        .lists(10px,
+                                        0px,
+                                        250px);
+                                    }
+                                    &.active {
+                                        display: block;
+                                    }
+                                }
+                            }
+                            &.right {
+                                ul.right--title {
+                                    .lists_in_section;
+                                }
+                                div {
+                                    display: none;
+                                    &.subfis,
+                                    &.subtax,
+                                    &.dir {
+                                        .lists(10px,
+                                        0,
+                                        250px);
+                                    }
+                                    &.active {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.politics {
+                        background-color: #fff;
+                        div {
+                            &.left,
+                            &.right,
+                            &.bottom {
+                                float: left;
+                                ul[class] {
+                                    height: 35px;
+                                    .lists_in_section;
+                                }
+                            }
+                            &.left {
+                                height: 210px;
+                                width: 470px;
+                                margin: 10px 0 10px 20px;
+                                div {
+                                    display: none;
+                                    .lists(0px,
+                                    0px,
+                                    250px);
+                                    &.active {
+                                        display: block;
+                                    }
+                                }
+                            }
+                            &.right {
+                                height: 210px;
+                                width: 470px;
+                                margin: 10px 20px;
+                                div {
+                                    display: none;
+                                    .lists(0px,
+                                    0px,
+                                    250px);
+                                    &.active {
+                                        display: block;
+                                    }
+                                }
+                            }
+                            &.bottom {
+                                height: 120px;
+                                width: 960px;
+                                margin: 0 20px 10px;
+                                div {
+                                    display: none;
+                                    ul {
+                                        li {
+                                            float: left;
+                                            padding: 0 5px;
+                                            a {
+                                                color: #000;
+                                                text-decoration: underline;
+                                                &:hover {
+                                                    color: #f00;
+                                                }
+                                                transition: color 0.2s ease-in;
+                                            }
+                                        }
+                                    }
+                                    &.active {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.budgets {
+                        background-color: #fff;
+                        div.left--top,
+                        div.left--bottom,
+                        div.right {
+                            a.title {
+                                display: block;
+                                height: 35px;
+                                line-height: 35px;
+                                border-bottom: 1px solid #d9d9d9;
+                                color: #3b7dd4;
+                                &:hover {
+                                    color: #f00;
+                                }
+                                transition: color 0.2s ease-in;
+                            }
+                            .lists(0px,
+                            0px,
+                            250px);
+                        }
+                        div.left--top,
+                        div.left--bottom {
+                            float: left;
+                            height: 160px;
+                            width: 470px;
+                            margin: 10px 0 10px 20px;
+                        }
+                        div.right {
+                            float: right;
+                            height: 340px;
+                            width: 470px;
+                            margin: 10px 20px;
+                        }
+                    }
+                    &.services {
+                        background-color: #fff;
+                        div.left,
+                        div.mid,
+                        div.right {
+                            height: 340px;
+                            width: 320px;
+                            margin: 10px 0 0 10px;
+                            float: left;
+                            ul[class] {
+                                height: 35px;
+                                .lists_in_section;
+                            }
+                            div {
+                                display: none;
+                                &.active {
+                                    display: block;
+                                }
+                            }
+                        }
+                        div.left {
+                            div.map {
+                                a {
+                                    display: block;
+                                    height: 276px;
+                                    width: 172px;
+                                    margin: 0 auto;
+                                }
+                            }
+                            div.currency {
+                                .lists(0px,
+                                0px,
+                                250px);
+                            }
+                        }
+                        div.mid,
+                        div.right {
+                            div {
+                                .lists(0px,
+                                0px,
+                                250px);
+                            }
+                        }
+                    }
+                    &.participation {
+                        background-color: #fff;
+                        div.left,
+                        div.right {
+                            float: left;
+                            height: 340px;
+                        }
+                        div.left {
+                            width: 500px;
+                            margin: 10px 10px 10px 20px;
+                            ul.left--title {
+                                height: 35px;
+                                .lists_in_section;
+                            }
+                            div {
+                                display: none;
+                                &.online {
+                                    ul {
+                                        li {
+                                            height: 150px;
+                                            border-bottom: 1px dashed #999;
+                                            a {
+                                                img {
+                                                    float: left;
+                                                    margin: 15px;
+                                                }
+                                                span,
+                                                p {
+                                                    float: left;
+                                                    width: 250px;
+                                                    margin: 10px 15px;
+                                                }
+                                                span {
+                                                    display: inline-block;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &.letters {
+                                    .lists(0px,
+                                    0px,
+                                    250px);
+                                }
+                                &.active {
+                                    display: block;
+                                }
+                            }
+                        }
+                        div.right {
+                            width: 440px;
+                            margin: 10px 20px 10px 10px;
+                            ul {
+                                li {
+                                    text-align: center;
+                                    float: left;
+                                    a {
+                                        span {
+                                            display: block;
+                                            height: 50px;
+                                            width: 160px;
+                                        }
+                                    }
+                                    &:first-child {
+                                        margin: 28px 20px 0 40px;
+                                        a {
+                                            span {
+                                                background: url('../images/1502081727569533641.jpg') 0 0 no-repeat;
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        margin: 28px 40px 0 20px;
+                                        a {
+                                            span {
+                                                background: url('../images/1502081727578729243.jpg') 0 0 no-repeat;
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        margin: 28px 20px 0 40px;
+                                        a {
+                                            span {
+                                                background: url('../images/1502081727590107134.jpg') 0 0 no-repeat;
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(4) {
+                                        margin: 28px 40px 0 20px;
+                                        a {
+                                            span {
+                                                background: url('../images/1502081727597014039.jpg') 0 0 no-repeat;
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(5) {
+                                        margin: 28px 20px 0 40px;
+                                        a {
+                                            span {
+                                                background: url('../images/1502081728000742349.jpg') 0 0 no-repeat;
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(6) {
+                                        margin: 28px 40px 0 20px;
+                                        a {
+                                            span {
+                                                background: url('../images/1502081728003669584.jpg') 0 0 no-repeat;
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(7) {
+                                        margin: 28px 20px 0 40px;
+                                        a {
+                                            span {
+                                                background: url('../images/1502081728007957726.jpg') 0 0 no-repeat;
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(8) {
+                                        margin: 28px 40px 0 20px;
+                                        a {
+                                            span {
+                                                background: url('../images/1502081728011442240.jpg') 0 0 no-repeat;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.propagation {
+                        background-color: #fff;
+                        div.left,
+                        div.right,
+                        div.bottom {
+                            float: left;
+                        }
+                        div.left,
+                        div.right {
+                            height: 170px;
+                            width: 470px;
+                            ul[class] {
+                                height: 35px;
+                                .lists_in_section;
+                            }
+                            div {
+                                display: none;
+                                .lists(0px,
+                                0px,
+                                250px);
+                                &.active {
+                                    display: block;
+                                }
+                            }
+                        }
+                        div.left {
+                            margin: 10px 0 10px 20px;
+                        }
+                        div.right {
+                            margin: 10px 20px;
+                        }
+                        div.bottom {
+                            height: 160px;
+                            width: 960px;
+                            margin: 0 20px 10px;
+                            a.title {
+                                display: block;
+                                height: 35px;
+                                line-height: 35px;
+                                border-bottom: 1px solid #d9d9d9;
+                                color: #3b7dd4;
+                                &:hover {
+                                    color: #f00;
+                                }
+                                transition: color 0.2s ease-in;
+                            }
+                            ul.pics {
+                                li {
+                                    float: left;
+                                    margin: 11px;
+                                }
+                            }
+                            ul.articles {
+                                li {
+                                    a {
+                                        span {
+                                            height: 24px;
+                                            line-height: 24px;
+                                            &.title {
+                                                font-size: 14px;
+                                                color: @txtColor;
+                                            }
+                                            &.date {
+                                                font-size: 12px;
+                                                color: #999;
+                                                float: right;
+                                                &:before {
+                                                    content: "[";
+                                                }
+                                                &:after {
+                                                    content: "]";
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.active {
+                        display: block;
+                        height: 360px;
+                        width: 1000px;
+                    }
+                }
+            }
+            div.container--top {
+                height: 270px;
+                width: 1000px;
+                margin: 0 auto;
+                position: relative;
+                overflow: hidden;
+                section {
+                    height: 270px;
+                    width: 1000px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: #fff;
+                    display: none;
+                    &.container--top--news {
+                        div {
+                            height: 270px;
+                            float: left;
+                            &.pic {
+                                width: 650px;
+                                position: relative;
+                                overflow: hidden;
+                                ul {
+                                    position: absolute;
+                                    &.pic--container {
+                                        width: 20000em;
+                                        position: relative;
+                                        list-style: none;
+                                        margin: 0;
+                                        padding: 0;
+                                        li {
+                                            float: left;
+                                            a {
+                                                img {
+                                                    height: 270px;
+                                                    width: 650px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.pic--title {
+                                        height: 34px;
+                                        width: 100%;
+                                        bottom: 0;
+                                        li {
+                                            height: 34px;
+                                            line-height: 34px;
+                                            a {
+                                                span {
+                                                    margin-left: 9px;
+                                                    color: #fff;
+                                                    font-size: 16px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                p.pic--pagination {
+                                    margin: 0;
+                                    position: absolute;
+                                    bottom: 10px;
+                                    right: 15px;
+                                    overflow: hidden;
+                                    a {
+                                        display: block;
+                                        width: 14px;
+                                        height: 14px;
+                                        font-size: 12px;
+                                        line-height: 14px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        float: left;
+                                        overflow: hidden;
+                                        border-radius: 100%;
+                                        background-color: #fff;
+                                        margin-right: 6px;
+                                        &.active {
+                                            background-color: #e1e3e2;
+                                        }
+                                    }
+                                }
+                            }
+                            &.news {
+                                width: 350px;
+                                background-color: #E2E9F1;
+                                span {
+                                    line-height: 25px;
+                                    height: 25px;
+                                    font-size: 14px;
+                                    color: #3b7dd4;
+                                    font-weight: bold;
+                                    display: inline-block;
+                                    margin: 15px 0 0 15px;
+                                }
+                                a.more {
+                                    font-size: 12px;
+                                    line-height: 25px;
+                                    color: @txtColor;
+                                    display: inline-block;
+                                    float: right;
+                                    margin: 15px 15px 0 0;
+                                }
+                                ul {
+                                    padding: 0 15px;
+                                    margin: 5px 0 0 0;
+                                    li {
+                                        font-size: 14px;
+                                        height: 30px;
+                                        line-height: 30px;
+                                        border-bottom: 1px dotted #88a6cc;
+                                        .text-ellipsis;
+                                        &:last-child {
+                                            border-width: 0;
+                                        }
+                                        a {
+                                            font-size: 14px;
+                                            color: @txtColor;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.container--top--data {
+                        div.stats {
+                            width: 324px;
+                            height: 250px;
+                            overflow: hidden;
+                            float: left;
+                            border-right: 1px solid #d9d9d9;
+                            padding: 20px 10px 0;
+                            div.stats--top {
+                                border-bottom: 1px solid @navColor;
+                                span {
+                                    font-size: 14px;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    width: 90px;
+                                    color: @navColor;
+                                    font-weight: bold;
+                                    display: inline-block;
+                                    text-align: center;
+                                }
+                                a {
+                                    color: #000;
+                                    font-size: 12px;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    float: right;
+                                }
+                            }
+                            ul {
+                                li {
+                                    line-height: 22px;
+                                    list-style-type: none;
+                                    border-width: 1px 0 0 0;
+                                    border-color: #eee;
+                                    border-style: solid;
+                                    padding: 3px 0;
+                                    a {
+                                        span {
+                                            &.title {
+                                                color: @txtColor;
+                                            }
+                                            &.date {
+                                                color: #999;
+                                                float: right;
+                                                &:before {
+                                                    content: "[";
+                                                }
+                                                &:after {
+                                                    content: "]";
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        div.charts--index {
+                            height: 250px;
+                            width: 115px;
+                            float: left;
+                            padding: 0 0 0 20px;
+                            ul.title {
+                                height: 40px;
+                                li {
+                                    margin: 13px 0;
+                                    float: left;
+                                    height: 14px;
+                                    width: 40px;
+                                    line-height: 14px;
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    text-align: center;
+                                    border-right: 1px solid #000;
+                                    &:last-child {
+                                        border-width: 0;
+                                    }
+                                    &.active {
+                                        a {
+                                            color: @navColor;
+                                        }
+                                    }
+                                    a {
+                                        color: #999;
+                                    }
+                                }
+                            }
+                            ul.charts--index--revenue,
+                            ul.charts--index--expenditure {
+                                display: none;
+                                font-size: 12px;
+                                li {
+                                    width: 110px;
+                                    height: 25px;
+                                    padding-right: 5px;
+                                    line-height: 25px;
+                                    text-align: center;
+                                    background-color: #ebebeb;
+                                    color: #000;
+                                    margin-top: 2px;
+                                    cursor: pointer;
+                                    &.active {
+                                        background-color: #4c719e;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                            ul.active {
+                                display: block;
+                            }
+                        }
+                        div#charts {
+                            height: 244px;
+                            width: 500px;
+                            float: left;
+                            margin: 13px 10px;
+                        }
+                    }
+                    &.container--top--business {
+                        div {
+                            span.title {
+                                border-bottom: 1px solid @navColor;
+                                font-size: 14px;
+                                height: 40px;
+                                line-height: 40px;
+                                width: 90px;
+                                color: @navColor;
+                                font-weight: bold;
+                                display: block;
+                                text-align: center;
+                            }
+                            ul {
+                                li {
+                                    display: block;
+                                    height: 62px;
+                                    width: 134px;
+                                    float: left;
+                                    a {
+                                        span {
+                                            display: block;
+                                            height: 62px;
+                                            width: 134px;
+                                        }
+                                    }
+                                }
+                            }
+                            &.fiscal {
+                                width: 286px;
+                                float: left;
+                                ul {
+                                    li {
+                                        &:first-child {
+                                            margin: 6px 3px 6px 6px;
+                                            a {
+                                                span {
+                                                    background: url('../images/1503260928411432774.jpg') 0 0 no-repeat;
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(2) {
+                                            margin: 6px 6px 6px 3px;
+                                            a {
+                                                span {
+                                                    background: url('../images/1503260928422098342.jpg') 0 0 no-repeat;
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(3) {
+                                            margin: 6px 3px 6px 6px;
+                                            a {
+                                                span {
+                                                    background: url('../images/1503260928419426432.jpg') 0 0 no-repeat;
+                                                }
+                                            }
+                                        }
+                                        &:last-child {
+                                            margin: 6px 6px 6px 3px;
+                                            a {
+                                                span {
+                                                    background: url('../images/1503261352310628915.jpg') 0 0 no-repeat;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.tax {
+                                width: 706px;
+                                float: right;
+                                ul {
+                                    li {
+                                        &:first-child,
+                                        &:nth-child(6),
+                                        &:last-child {
+                                            margin: 6px 3px 6px 6px
+                                        }
+                                        &:nth-child(2),
+                                        &:nth-child(3),
+                                        &:nth-child(4),
+                                        &:nth-child(7),
+                                        &:nth-child(8),
+                                        &:nth-child(9) {
+                                            margin: 6px 3px;
+                                        }
+                                        &:nth-child(5),
+                                        &:nth-child(10) {
+                                            margin: 6px 6px 6px 3px;
+                                        }
+                                        &:first-child {
+                                            a {
+                                                span {
+                                                    background: url('../images/1507011709239886500.jpg') 0 0 no-repeat;
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(2) {
+                                            a {
+                                                span {
+                                                    background: url('../images/1502081114214639864.jpg') 0 0 no-repeat;
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(3) {
+                                            a {
+                                                span {
+                                                    background: url('../images/1502081114211544110.jpg') 0 0 no-repeat;
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(4) {
+                                            a {
+                                                span {
+                                                    background: url('../images/1502081114198124964.jpg') 0 0 no-repeat;
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(5) {
+                                            a {
+                                                span {
+                                                    background: url('../images/1502081114207537050.jpg') 0 0 no-repeat;
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(6) {
+                                            a {
+                                                span {
+                                                    background: url('../images/1502081114204098777.jpg') 0 0 no-repeat;
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(7) {
+                                            a {
+                                                span {
+                                                    background: url('../images/1502081114201855292.jpg') 0 0 no-repeat;
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(8) {
+                                            a {
+                                                span {
+                                                    background: url('../images/1502081114200028824.jpg') 0 0 no-repeat;
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(9) {
+                                            a {
+                                                span {
+                                                    background: url('../images/1502081114217986207.jpg') 0 0 no-repeat;
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(10) {
+                                            a {
+                                                span {
+                                                    background: url('../images/1502171724034497616.jpg') 0 0 no-repeat;
+                                                }
+                                            }
+                                        }
+                                        &:last-child {
+                                            a {
+                                                span {
+                                                    background: url('../images/1602291517094668074.jpg') 0 0 no-repeat;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.container--top--title {
+                        div.main {
+                            height: 240px;
+                            width: 608px;
+                            float: left;
+                            a {
+                                img {
+                                    margin: 8px 0;
+                                }
+                            }
+                        }
+                        div.review {
+                            height: 240px;
+                            width: 315px;
+                            float: right;
+                            a {
+                                display: block;
+                                height: 65px;
+                                width: 315px;
+                                border: 1px solid #e1e3e2;
+                                margin: 5px 0;
+                                &:last-child {
+                                    height: 30px;
+                                    background-color: #e1e3e2;
+                                    color: #000;
+                                    text-align: center;
+                                    line-height: 30px;
+                                }
+                                img {
+                                    height: 59px;
+                                    width: 309px;
+                                    margin: 3px;
+                                }
+                            }
+                        }
+                    }
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+            nav.below {
+                height: 80px;
+                width: 1000px;
+                margin: 0 auto;
+                ul {
+                    height: 80px;
+                    width: 1000px;
+                    li {
+                        height: 80px;
+                        width: 250px;
+                        float: left;
+                        background-color: #fff;
+                        cursor: pointer;
+                        &:first-child {
+                            span.img {
+                                background: url('../images/1502061116009103033.png') center center no-repeat;
+                            }
+                        }
+                        &:nth-child(2) {
+                            span.img {
+                                background: url('../images/1502061116005206397.png') center center no-repeat;
+                            }
+                        }
+                        &:nth-child(3) {
+                            span.img {
+                                background: url('../images/1502061116016608516.png') center center no-repeat;
+                            }
+                        }
+                        &:nth-child(4) {
+                            span.img {
+                                background: url('../images/1502061116012699352.png') center center no-repeat;
+                            }
+                        }
+                        &.active {
+                            background-color: @navColor;
+                            span {
+                                &:nth-child(2) {
+                                    display: block;
+                                    color: #fff;
+                                    font-weight: bold;
+                                }
+                                &:nth-child(3) {
+                                    color: #fff;
+                                }
+                            }
+                        }
+                        span {
+                            &:first-child {
+                                height: 60px;
+                                width: 60px;
+                                display: block;
+                                float: left;
+                                margin: 10px;
+                            }
+                            &:nth-child(2) {
+                                display: block;
+                                font-size: 18px;
+                                padding: 20px 0 0 0;
+                            }
+                            &:nth-child(3) {
+                                font-size: 13px;
+                            }
+                        }
+                        transition: background-color 0.2s ease-in,
+                        color 0.2s ease-in;
+                    }
+                }
+            }
+            div.container--mid {
+                height: 306px;
+                width: 1000px;
+                margin: 0 auto;
+                padding: 10px 0 0 0;
+                background-color: #fff;
+                div.notices {
+                    height: 289px;
+                    width: 675px;
+                    margin: 0 0 0 35px;
+                    float: left;
+                    nav.div--notices__nav {
+                        width: 461px;
+                        display: inline-block;
+                        ul {
+                            height: 40px;
+                            li {
+                                margin: 13px 0;
+                                float: left;
+                                height: 14px;
+                                width: 76px;
+                                line-height: 14px;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-align: center;
+                                border-right: 1px solid #000;
+                                &:last-child {
+                                    border-width: 0;
+                                }
+                                &.active {
+                                    a {
+                                        color: @navColor;
+                                    }
+                                }
+                                a {
+                                    color: #999;
+                                }
+                            }
+                        }
+                    }
+                    ul[class^=div--notices__ul] {
+                        display: none;
+                        padding: 0 0 0 25px;
+                        li {
+                            list-style-type: disc;
+                            a {
+                                span {
+                                    height: 24px;
+                                    line-height: 24px;
+                                    display: inline-block;
+                                    &.title {
+                                        width: 550px;
+                                        font-size: 14px;
+                                        color: @txtColor;
+                                        .text-ellipsis;
+                                    }
+                                    &.date {
+                                        font-size: 12px;
+                                        color: #999;
+                                        float: right;
+                                        margin-right: 35px;
+                                        &:before {
+                                            content: "[";
+                                        }
+                                        &:after {
+                                            content: "]";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.active {
+                            display: block;
+                        }
+                    }
+                }
+                div.container--mid--right {
+                    height: 306px;
+                    width: 254px;
+                    margin: 0 35px 0 0;
+                    float: left;
+                    a.manifest,
+                    a.wsswj {
+                        display: block;
+                        height: 40px;
+                        width: 225px;
+                        color: #fff;
+                        font-weight: bold;
+                        background-color: @navColor;
+                        border-radius: 10px;
+                        margin: 0 auto 5px auto;
+                        font-size: 18px;
+                        line-height: 40px;
+                        text-align: center;
+                    }
+                    div.public {
+                        span.title {
+                            font-size: 14px;
+                            height: 40px;
+                            line-height: 40px;
+                            width: 90px;
+                            color: @navColor;
+                            font-weight: bold;
+                            display: inline-block;
+                        }
+                        a {
+                            color: #000;
+                            font-size: 14px;
+                            span {
+                                font-size: 12px;
+                            }
+                        }
+                        ul {
+                            li {
+                                line-height: 22px;
+                                list-style-type: none;
+                                border-width: 1px 0 0 0;
+                                border-color: #eee;
+                                border-style: solid;
+                                padding: 3px 0;
+                            }
+                        }
+                    }
+                }
+            }
+            div.container--below {
+                height: 184px;
+                width: 1000px;
+                margin: 0 auto;
+                padding: 30px 0 0 0;
+                div.sub,
+                div.download,
+                div.participate {
+                    height: 150px;
+                    overflow: hidden;
+                    float: left;
+                    div[class$=title] {
+                        height: 0;
+                        width: 67px;
+                        line-height: 28px;
+                        text-align: center;
+                        float: left;
+                        font-size: 14px;
+                        color: #fff;
+                        border-bottom: 28px solid @navColor;
+                        border-right: 28px solid transparent;
+                        display: inline-block;
+                    }
+                    a.more {
+                        font-size: 12px;
+                        line-height: 28px;
+                        height: 28px;
+                        padding: 0;
+                    }
+                }
+                div.sub,
+                div.download {
+                    width: 330px;
+                    padding: 0 40px 0 0;
+                    ul {
+                        padding: 28px 0 0;
+                        li {
+                            height: 24px;
+                            line-height: 24px;
+                            a {
+                                span {
+                                    &.title {
+                                        color: @txtColor;
+                                    }
+                                    &.date {
+                                        color: #999;
+                                        float: right;
+                                        &:before {
+                                            content: "[";
+                                        }
+                                        &:after {
+                                            content: "]";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                div.participate {
+                    width: 260px;
+                    div.participate--sub {
+                        width: 260px;
+                        columns: 130px 2;
+                        a {
+                            line-height: 24px;
+                            height: 24px;
+                            width: 130px;
+                            display: inline-block;
+                            color: @txtColor;
+                        }
+                    }
+                }
+                div.link {
+                    height: 34px;
+                    width: 1000px;
+                    span {
+                        font-size: 16px;
+                        line-height: 34px;
+                        height: 34px;
+                        width: 120px;
+                        float: left;
+                        color: #fff;
+                        background-color: @navColor;
+                        text-align: center;
+                    }
+                    select {
+                        margin: 7px;
+                    }
+                }
+            }
+        }
+        div.container--mobile {
+            display: none;
+        }
+    }
+    @media all and (max-width: 414px) {
+        div.container--pc {
+            display: none;
+        }
+        div.container--mobile {
+            background-color: #e4e4e4;
+            section {
+                width: 100%;
+                &.pic--container {
+                    height: 200px;
+                    margin: 5px 0;
+                    div.pic {
+                        width: 100%;
+                        position: relative;
+                        ul {
+                            position: absolute;
+                            &.pic--container {
+                                width: 20000em;
+                                position: relative;
+                                list-style: none;
+                                margin: 0;
+                                padding: 0;
+                                li {
+                                    float: left;
+                                    a {
+                                        img {
+                                            height: 200px;
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                            &.pic--title {
+                                height: 34px;
+                                width: 100%;
+                                bottom: 0;
+                                li {
+                                    height: 34px;
+                                    line-height: 34px;
+                                    a {
+                                        span {
+                                            margin-left: 9px;
+                                            color: #fff;
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.news,
+                &.notices,
+                &.publish,
+                &.policies,
+                &.data,
+                &.services {
+                    max-height: 150px;
+                    margin: 5px 0;
+                    background-color: #fff;
+                    div[class$=title] {
+                        height: 35px;
+                        line-height: 35px;
+                        border-bottom: 2px solid #ccc;
+                        span.title {
+                            margin: 0 0 0 15px;
+                        }
+                        a {
+                            float: right;
+                            margin: 0 15px 0;
+                        }
+                    }
+                    ul {
+                        li {
+                            line-height: 18px;
+                            min-height: 18px;
+                            padding: 8px 15px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            a {
+                                color: #3d3d3d;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+article {
+    h1 {
+        font-size: 22px;
+    }
+    span {
+        &[id] {
+            cursor: pointer;
+        }
+    }
+    ul {
+        li {
+            cursor: pointer;
+            float: left;
+            display: block;
+            height: 14px;
+            width: 14px;
+            border-radius: 100%;
+            &:first-child {
+                background-color: #f9f4b0;
+            }
+            &:nth-child(2) {
+                background-color: #9fddf6;
+            }
+            &:nth-child(3) {
+                background-color: #dfdfdf;
+            }
+            &:nth-child(4) {
+                background-color: #fbd1db;
+            }
+            &:nth-child(5) {
+                background-color: #e3c8f5;
+            }
+            &:nth-child(6) {
+                background-color: #fff;
+            }
+        }
+    }
+    p {
+        transition: background-color 0.2s ease-in, font-size 0.2s ease-in;
+    }
+}

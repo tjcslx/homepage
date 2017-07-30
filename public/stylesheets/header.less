@@ -1,0 +1,122 @@
+header {
+    @media all and (min-width: 415px) {
+        div.mobile {
+            display: none;
+        }
+        div.pc {
+            height: 190px;
+            width: 100%;
+            margin: 0 auto;
+            div.top {
+                height: 145px;
+                width: 100%;
+                background-color: @topColor;
+                .top--mid {
+                    height: 145px;
+                    width: 1000px;
+                    margin: 0 auto;
+                    background: url('../images/1503121402479932939.jpg') no-repeat top;
+                    .top--mid--left {
+                        height: 113px;
+                        width: 433px;
+                        float: left;
+                        padding-top: 32px;
+                    }
+                    .top--mid--right {
+                        height: 102px;
+                        width: 567px;
+                        float: left;
+                        position: relative;
+                        padding-top: 43px;
+                        span {
+                            height: 29px;
+                            width: 74px;
+                            line-height: 29px;
+                            color: #fff;
+                            font-size: 18px;
+                            text-align: center;
+                            position: absolute;
+                            top: 0;
+                            border-width: 0 1px 1px 1px;
+                            border-style: solid;
+                            border-color: #fff;
+                            border-radius: 0 0 10% 10%;
+                            &#fiscal {
+                                right: 74px;
+                                background-color: #F0B70F;
+                            }
+                            &#tax {
+                                right: 0;
+                                background-color: #2960B5;
+                            }
+                        }
+                    }
+                }
+            }
+            div.above {
+                height: 45px;
+                width: 100%;
+                background-color: @navColor;
+                nav.pc__nav--above {
+                    height: 45px;
+                    width: 988px;
+                    margin: 0 auto;
+                    li {
+                        height: 45px;
+                        line-height: 45px;
+                        text-align: center;
+                        width: 140px;
+                        background-color: @navColor;
+                        color: #fff;
+                        float: left;
+                        border-left: 1px solid @borderColor;
+                        cursor: pointer;
+                        transition: color 0.2s ease-in, background-color 0.2s ease-in;
+                        &:last-child {
+                            border-right: 1px solid @borderColor;
+                        }
+                        &:hover,
+                        &.active {
+                            background-color: #fff;
+                            color: @navColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media all and (max-width: 414px) {
+        div.pc {
+            display: none;
+        }
+        div.mobile {
+            div.top {
+                height: 75px;
+                width: 100%;
+                background-color: #0062c5;
+                img {
+                    margin: 17px 0 0 17px;
+                }
+            }
+            nav.mobile__nav--above {
+                height: 75px;
+                width: 100%;
+                background-color: #0062c5;
+                ul {
+                    li {
+                        height: 37px;
+                        width: 33%;
+                        line-height: 37px;
+                        float: left;
+                        text-align: center;
+                        a {
+                            color: #fff;
+                            font-size: 16px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
