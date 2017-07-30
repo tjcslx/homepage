@@ -10,6 +10,8 @@ var db = new Db.Adapter({
     reconnectTimeout: 2000
 })
 
+// 通过新闻版块代码获取新闻。
+
 function getNewsTitleByCategory(req, res) {
     var count = parseInt(req.params.count)
     var fc = db.select('nm_title, date_format(insert_time, \'%m-%d\') as insert_date').where({
@@ -25,6 +27,8 @@ function getNewsTitleByCategory(req, res) {
     })
 }
 
+// 获取统计数据。
+
 function getStatsData(req, res) {
     db.select('d_data').where({
         'd_type': req.params.type,
@@ -34,6 +38,8 @@ function getStatsData(req, res) {
         console.log(err)
     })
 }
+
+// 通过新闻ID获取完整新闻，当ID等于0时为全部显示，否则为只显示一条记录。
 
 function getNewsById(req, res) {
     if (!parseInt(req.params.id)) {
@@ -52,6 +58,8 @@ function getNewsById(req, res) {
 
 }
 
+// 获取新闻版块。
+
 function getNewsCategory(req, res) {
     db.select('dnc_id, dnc_name').where({ 'status': '1' }).get('d_news_category', function(err, results) {
         res.json(results)
@@ -59,7 +67,7 @@ function getNewsCategory(req, res) {
     })
 }
 
-//向数据库中插入新闻记录，插入主表news_main。
+// 向数据库中插入新闻记录，插入主表news_main。
 function insertNews(req, res) {
     var message
     var d = new Date()
@@ -83,7 +91,7 @@ function insertNews(req, res) {
     })
 }
 
-//更新数据库中的新闻记录，更新主表news_main。
+// 更新数据库中的新闻记录，更新主表news_main。
 function updateNews(req, res) {
     var d = new Date()
     db.where({
@@ -105,7 +113,7 @@ function updateNews(req, res) {
     })
 }
 
-//删除数据库中的新闻记录，将主表news_main中的对应记录有效标志改为0。
+// 删除数据库中的新闻记录，将主表news_main中的对应记录有效标志改为0。
 function updateNewsToDisabled(req, res) {
     var d = new Date()
     db.where({

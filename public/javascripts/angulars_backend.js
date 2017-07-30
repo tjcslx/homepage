@@ -1,3 +1,5 @@
+// app主体并在路由上配置相应的页面及控制器。
+
 var app = angular.module('tjcsweb_backend', ['ngResource', 'ngRoute'])
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.when('/', {
@@ -15,8 +17,9 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     }).otherwise({
         redirectTo: '/'
     })
-    // $locationProvider.html5Mode(true)
 }])
+
+// 实现显示新闻版块、新闻列表以及增加、修改、删除新闻的控制器。
 
 app.controller('NewsCategoryPC', ['$scope', '$resource', function($scope, $resource) {
     var NewsCat = $resource('/api/cat')

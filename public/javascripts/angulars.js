@@ -1,3 +1,5 @@
+// app主体并在路由上配置相应的页面及控制器。
+
 var app = angular.module('tjcsweb', ['ngResource', 'ngRoute'])
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider.when('/', {
@@ -8,6 +10,8 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
     })
     $locationProvider.html5Mode(true)
 }])
+
+// 实现显示类控制器。
 
 app.controller('NewsCtrlPC', ['$scope', '$resource', function ($scope, $resource) {
     var News = $resource('/api/news/cat/1/count/7')
