@@ -10,7 +10,6 @@
     <div class="form-group">
         <label for="newscategory">新闻版块</label>&nbsp;
         <select class="form-control" id="newscategory" ng-controller="NewsCategoryPC" ng-model="news.nm_category">
-            <option value="0" selected="selected">请选择</option>
             <option ng-repeat="n in nc" value={{n.dnc_id}}>{{n.dnc_name}}</option>
         </select>
     </div>
